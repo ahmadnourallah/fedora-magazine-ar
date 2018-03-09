@@ -1,7 +1,7 @@
 {
      "direction"     : "rtl",
      "language"      : "ar",
-     "title"         : "مجلة فيدورا"
+     "title"         : "مجلة فيدورا",
      "plugins"       : ["favicon"],
      "pluginsConfig" : {
           "favicon"  : {
