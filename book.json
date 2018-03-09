@@ -1,0 +1,12 @@
+{
+     "direction"     : "rtl",
+     "language"      : "ar",
+     "title"         : "مجلة فيدورا"
+     "plugins"       : ["favicon"],
+     "pluginsConfig" : {
+          "favicon"  : {
+               "shortcut" : "https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.09/favicon.ico",
+               "bookmark" : "https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.09/favicon.ico"
+         }
+     }
+}
