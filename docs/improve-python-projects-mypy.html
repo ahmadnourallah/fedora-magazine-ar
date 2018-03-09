@@ -1,0 +1,322 @@
+
+<!DOCTYPE HTML>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>حسِّن مشاريع بايثون باستخدام mypy · مجلة فيدورا</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    
+        <link rel="shortcut icon" href='../https:/fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.09/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../https:/fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.09/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="اكتب للبحث" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    الرئيسية
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="improve-python-projects-mypy.html">
+            
+                <a href="improve-python-projects-mypy.html">
+            
+                    
+                    حسِّن مشاريع بايثون باستخدام mypy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            نشرت مع GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >حسِّن مشاريع بايثون باستخدام mypy</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x62D;&#x633;&#x651;&#x650;&#x646;-&#x645;&#x634;&#x627;&#x631;&#x64A;&#x639;-&#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646;-&#x628;&#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645;-mypy">&#x62D;&#x633;&#x651;&#x650;&#x646; &#x645;&#x634;&#x627;&#x631;&#x64A;&#x639; &#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646; &#x628;&#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; mypy</h1>
+<p><img src="https://fedoramagazine.org/wp-content/uploads/2018/02/mypy-945x400.jpg"></p>
+<p>&#x623;&#x62F;&#x627;&#x629; <em>myapp</em> &#x647;&#x64A; &#x645;&#x62F;&#x642;&#x642; &#x646;&#x648;&#x639;&#x64A; &#x633;&#x627;&#x643;&#x646; &#x644;&#x644;&#x63A;&#x629; &#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646;. &#x62A;&#x62C;&#x645;&#x639; &#x647;&#x630;&#x647; &#x627;&#x644;&#x623;&#x62F;&#x627;&#x629; &#x628;&#x64A;&#x646; &#x641;&#x648;&#x627;&#x626;&#x62F; &#x627;&#x644;&#x643;&#x62A;&#x627;&#x628;&#x629; &#x627;&#x644;&#x62F;&#x64A;&#x646;&#x627;&#x645;&#x64A;&#x643;&#x64A;&#x629; (dynamic typing) &#x648;&#x627;&#x644;&#x643;&#x62A;&#x627;&#x628;&#x629; &#x627;&#x644;&#x633;&#x627;&#x643;&#x646;&#x629; (static typing). &#x647;&#x630;&#x627; &#x64A;&#x62C;&#x639;&#x644;&#x646;&#x627; &#x646;&#x62A;&#x633;&#x627;&#x626;&#x644; &#x639;&#x646; &#x645;&#x639;&#x646;&#x649; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x646;&#x648;&#x639;&#x64A; &#x627;&#x644;&#x633;&#x627;&#x643;&#x646; (static type checking) &#x641;&#x64A; &#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646;&#x61F; &#x623;&#x643;&#x645;&#x644; &#x627;&#x644;&#x642;&#x631;&#x627;&#x621;&#x629; &#x644;&#x62A;&#x643;&#x62A;&#x634;&#x641; &#x630;&#x644;&#x643;.</p>
+<h2 id="&#x645;&#x627;-&#x647;&#x648;-&#x627;&#x644;&#x646;&#x648;&#x639;&#x61F;">&#x645;&#x627; &#x647;&#x648; &#x627;&#x644;&#x646;&#x648;&#x639;&#x61F;</h2>
+<p>&#x64A;&#x62D;&#x62A;&#x627;&#x62C; &#x627;&#x644;&#x646;&#x638;&#x627;&#x645; &#x644;&#x645;&#x639;&#x631;&#x641;&#x629; &#x645;&#x633;&#x627;&#x62D;&#x629; &#x627;&#x644;&#x630;&#x627;&#x643;&#x631;&#x629; &#x627;&#x644;&#x645;&#x637;&#x644;&#x648;&#x628;&#x629; &#x644;&#x64A;&#x62A;&#x645;&#x643;&#x646; &#x627;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C; &#x645;&#x646; &#x62A;&#x62E;&#x632;&#x64A;&#x646; &#x627;&#x644;&#x628;&#x64A;&#x627;&#x646;&#x627;&#x62A;. &#x62A;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x644;&#x63A;&#x627;&#x62A; &#x627;&#x644;&#x628;&#x631;&#x645;&#x62C;&#x629; <em>&#x627;&#x644;&#x623;&#x646;&#x648;&#x627;&#x639;</em> (types) &#x644;&#x62A;&#x62D;&#x62F;&#x64A;&#x62F; &#x630;&#x644;&#x643;. &#x64A;&#x62D;&#x62F;&#x62F; &#x643;&#x644; &#x646;&#x648;&#x639; &#x62D;&#x62C;&#x645; &#x627;&#x644;&#x630;&#x627;&#x643;&#x631;&#x629; &#x627;&#x644;&#x630;&#x64A; &#x64A;&#x646;&#x628;&#x63A;&#x64A; &#x639;&#x644;&#x649; &#x627;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C; &#x62D;&#x62C;&#x632;&#x647; &#x644;&#x62A;&#x62E;&#x632;&#x64A;&#x646; &#x627;&#x644;&#x628;&#x64A;&#x627;&#x646;&#x627;&#x62A;. &#x628;&#x639;&#x636; &#x627;&#x644;&#x623;&#x646;&#x648;&#x627;&#x639; &#x627;&#x644;&#x634;&#x627;&#x626;&#x639;&#x629;: &#x627;&#x644;&#x639;&#x62F;&#x62F; &#x627;&#x644;&#x635;&#x62D;&#x64A;&#x62D; (integer)&#x60C; &#x648;&#x627;&#x644;&#x639;&#x62F;&#x62F; &#x627;&#x644;&#x639;&#x634;&#x631;&#x64A; (float)&#x60C; &#x648;&#x627;&#x644;&#x633;&#x644;&#x633;&#x644;&#x629; &#x627;&#x644;&#x646;&#x635;&#x64A;&#x629; (string).</p>
+<p>&#x62A;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x643;&#x62A;&#x648;&#x628;&#x629; &#x62F;&#x64A;&#x646;&#x627;&#x645;&#x64A;&#x643;&#x64A;&#x627;&#x64B; &#x645;&#x646; &#x627;&#x644;&#x623;&#x646;&#x648;&#x627;&#x639; &#x641;&#x64A; &#x648;&#x642;&#x62A; &#x627;&#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644;. &#x62A;&#x645;&#x644;&#x643; &#x644;&#x63A;&#x629; &#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646; &#x646;&#x638;&#x627;&#x645; &#x623;&#x646;&#x648;&#x627;&#x639; &quot;&#x636;&#x639;&#x64A;&#x641; (weak)&quot;&#x60C; &#x623;&#x64A; &#x623;&#x646;&#x651;&#x64E; &#x627;&#x644;&#x645;&#x64F;&#x641;&#x633;&#x650;&#x631; &#x644;&#x627; &#x64A;&#x641;&#x631;&#x636; &#x623;&#x64A; &#x639;&#x645;&#x644;&#x64A;&#x629; &#x62A;&#x62D;&#x642;&#x642; &#x645;&#x646; &#x627;&#x644;&#x623;&#x646;&#x648;&#x627;&#x639;.</p>
+<p>&#x62A;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x643;&#x62A;&#x648;&#x628;&#x629; &#x633;&#x643;&#x648;&#x646;&#x64A;&#x627;&#x64B; &#x645;&#x646; &#x627;&#x644;&#x623;&#x646;&#x648;&#x627;&#x639; &#x628;&#x646;&#x627;&#x621;&#x64B; &#x639;&#x644;&#x649; &#x62A;&#x62D;&#x644;&#x64A;&#x644;&#x647;&#x627; &#x644;&#x644;&#x646;&#x635; &#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;&#x64A; &#x644;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C; &#x642;&#x628;&#x644; &#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x647;. &#x641;&#x639;&#x646;&#x62F;&#x645;&#x627; &#x64A;&#x646;&#x62C;&#x62D; &#x627;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C; &#x628;&#x639;&#x645;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642;&#x60C; &#x64A;&#x639;&#x646;&#x64A; &#x630;&#x644;&#x643; &#x646;&#x62C;&#x627;&#x62D;&#x647; &#x641;&#x64A; &#x645;&#x62C;&#x645;&#x648;&#x639;&#x629; &#x645;&#x646; &#x639;&#x645;&#x644;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x645;&#x646; &#x633;&#x644;&#x627;&#x645;&#x629; &#x627;&#x644;&#x623;&#x646;&#x648;&#x627;&#x639; (type safety). &#x64A;&#x62D;&#x62F;&#x62F; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x627;&#x644;&#x646;&#x648;&#x639;&#x64A; &#x627;&#x644;&#x633;&#x627;&#x643;&#x646; &#x627;&#x644;&#x623;&#x62E;&#x637;&#x627;&#x621; &#x627;&#x644;&#x645;&#x62D;&#x62A;&#x645;&#x644;&#x629; &#x641;&#x64A; &#x634;&#x64A;&#x641;&#x631;&#x629; &#x627;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C; &#x642;&#x628;&#x644; &#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x647;. &#x648;&#x644;&#x630;&#x644;&#x643; &#x628;&#x631;&#x645;&#x62C;&#x64A;&#x629; <em>myapp</em> - &#x648;&#x627;&#x644;&#x62A;&#x64A; &#x647;&#x64A; &#x645;&#x62F;&#x642;&#x642; &#x646;&#x648;&#x639;&#x64A; &#x633;&#x627;&#x643;&#x646; &#x644;&#x62A;&#x637;&#x628;&#x64A;&#x642;&#x627;&#x62A; &#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646; - &#x645;&#x641;&#x64A;&#x62F;&#x629;.</p>
+<h2 id="&#x62A;&#x62B;&#x628;&#x64A;&#x62A;-&#x648;&#x62A;&#x634;&#x63A;&#x64A;&#x644;-&#x623;&#x62F;&#x627;&#x629;-mypy">&#x62A;&#x62B;&#x628;&#x64A;&#x62A; &#x648;&#x62A;&#x634;&#x63A;&#x64A;&#x644; &#x623;&#x62F;&#x627;&#x629; mypy</h2>
+<p>&#x62A;&#x62B;&#x628;&#x64A;&#x62A; &#x627;&#x644;&#x623;&#x62F;&#x627;&#x629; &#x633;&#x647;&#x644; &#x639;&#x644;&#x649; &#x641;&#x64A;&#x62F;&#x648;&#x631;&#x627; &#x641;&#x647;&#x64A; &#x645;&#x62D;&#x632;&#x645;&#x629; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639;&#x627;&#x62A; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;:</p>
+<pre><code>$ dnf install python3-mypy
+</code></pre><p>&#x633;&#x646;&#x642;&#x648;&#x645; &#x627;&#x644;&#x622;&#x646; &#x628;&#x625;&#x646;&#x634;&#x627;&#x621; &#x62A;&#x637;&#x628;&#x64A;&#x642; &#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646; &#x628;&#x633;&#x64A;&#x637; &#x644;&#x641;&#x647;&#x645; &#x648;&#x625;&#x62E;&#x62A;&#x628;&#x627;&#x631; &#x622;&#x644;&#x64A;&#x629; &#x639;&#x645;&#x644; &#x647;&#x630;&#x647; &#x627;&#x644;&#x623;&#x62F;&#x627;&#x629;.</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,surname,firstname,age,job)</span>:</span>
+        self.surname = surname
+        self.firstname = firstname
+        self.age = age
+        self.job = job
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">display_doctors</span><span class="hljs-params">(persons)</span>:</span>
+    <span class="hljs-keyword">for</span> person <span class="hljs-keyword">in</span> persons:
+        <span class="hljs-keyword">if</span> person.job.lower()<span class="hljs-keyword">in</span>[<span class="hljs-string">&apos;gp&apos;</span>,<span class="hljs-string">&apos;dentist&apos;</span>,<span class="hljs-string">&apos;cardiologist&apos;</span>]:
+            print(f<span class="hljs-string">&apos;{person.surname} {person.name}&apos;</span>)
+
+mike = Person(<span class="hljs-string">&apos;Davis&apos;</span>, <span class="hljs-string">&apos;Mike&apos;</span>, <span class="hljs-string">&apos;45&apos;</span>, <span class="hljs-string">&apos;dentist&apos;</span>)
+john = Person(<span class="hljs-string">&apos;Roberts&apos;</span>, <span class="hljs-string">&apos;John&apos;</span>, <span class="hljs-number">21</span>, <span class="hljs-string">&apos;teacher&apos;</span>)
+lee = Person(<span class="hljs-string">&apos;Willams&apos;</span>, <span class="hljs-string">&apos;Lee&apos;</span>, <span class="hljs-string">&apos;gp&apos;</span>, <span class="hljs-number">56</span>)
+
+display_doctors(mike)
+display_doctors([mike, john, <span class="hljs-string">&apos;lee&apos;</span>])
+</code></pre>
+<p>&#x627;&#x62D;&#x641;&#x638; &#x647;&#x630;&#x627; &#x627;&#x644;&#x645;&#x642;&#x62A;&#x637;&#x641; &#x627;&#x644;&#x628;&#x631;&#x645;&#x62C;&#x64A; &#x641;&#x64A; &#x645;&#x644;&#x641; &#x628;&#x627;&#x633;&#x645; <em>testing_mypy.py</em>. &#x642;&#x645; &#x627;&#x644;&#x622;&#x646; &#x628;&#x62A;&#x634;&#x63A;&#x64A;&#x644; &#x623;&#x62F;&#x627;&#x629; <em>mypy</em> &#x639;&#x644;&#x649; &#x647;&#x630;&#x627; &#x627;&#x644;&#x645;&#x644;&#x641;:</p>
+<pre><code>$ mypy testing_mypy.py
+</code></pre><p>&#x644;&#x627;&#x62D;&#x638; &#x623;&#x646;&#x651;&#x64E; &#x623;&#x62F;&#x627;&#x629; <em>myapp</em> &#x645;&#x62A;&#x633;&#x627;&#x647;&#x644;&#x629; &#x625;&#x641;&#x62A;&#x631;&#x627;&#x636;&#x64A;&#x627;&#x64B;&#x60C; &#x641;&#x639;&#x646;&#x62F; &#x62A;&#x634;&#x63A;&#x64A;&#x644;&#x643; &#x644;&#x644;&#x645;&#x62B;&#x627;&#x644; &#x623;&#x639;&#x644;&#x627;&#x647; &#x644;&#x646; &#x64A;&#x62A;&#x645; &#x625;&#x631;&#x62C;&#x627;&#x639; &#x623;&#x64A;&#x651;&#x64E;&#x629; &#x623;&#x62E;&#x637;&#x627;&#x621;. &#x647;&#x630;&#x627; &#x627;&#x644;&#x62A;&#x633;&#x627;&#x647;&#x644; &#x627;&#xFEF9;&#x641;&#x62A;&#x631;&#x627;&#x636;&#x64A; &#x645;&#x641;&#x64A;&#x62F; &#x644;&#x644;&#x62A;&#x637;&#x628;&#x64A;&#x642; &#x627;&#x644;&#x630;&#x64A; &#x64A;&#x62D;&#x62A;&#x648;&#x64A; &#x639;&#x644;&#x649; &#x642;&#x627;&#x639;&#x62F;&#x629; &#x634;&#x64A;&#x641;&#x631;&#x627;&#x62A; &#x643;&#x628;&#x64A;&#x631;&#x629;&#x60C; &#x628;&#x62D;&#x64A;&#x62B; &#x64A;&#x645;&#x643;&#x646;&#x643; &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x647;&#x630;&#x647; &#x627;&#x644;&#x628;&#x631;&#x645;&#x62C;&#x64A;&#x629; &#x62A;&#x62F;&#x631;&#x64A;&#x62C;&#x64A;&#x627;&#x64B; &#x641;&#x64A; &#x645;&#x634;&#x631;&#x648;&#x639;&#x643;.</p>
+<h3 id="&#x625;&#x636;&#x627;&#x641;&#x629;-&#x62A;&#x644;&#x645;&#x64A;&#x62D;&#x627;&#x62A;-&#x644;&#x644;&#x623;&#x646;&#x648;&#x627;&#x639;">&#x625;&#x636;&#x627;&#x641;&#x629; &#x62A;&#x644;&#x645;&#x64A;&#x62D;&#x627;&#x62A; &#x644;&#x644;&#x623;&#x646;&#x648;&#x627;&#x639;</h3>
+<p>&#x645;&#x639; &#x625;&#x635;&#x62F;&#x627;&#x631; &#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646; 3.6 &#x627;&#x644;&#x625;&#x641;&#x62A;&#x631;&#x627;&#x636;&#x64A; &#x641;&#x64A; &#x641;&#x64A;&#x62F;&#x648;&#x631;&#x627; 27 &#x641;&#x645;&#x627; &#x641;&#x648;&#x642;&#x60C; &#x64A;&#x645;&#x643;&#x646;&#x643; &#x625;&#x636;&#x627;&#x641;&#x629; &#x62A;&#x644;&#x645;&#x64A;&#x62D;&#x627;&#x62A; &#x644;&#x644;&#x623;&#x646;&#x648;&#x627;&#x639; (type hints) &#x644;&#x634;&#x631;&#x62D; &#x634;&#x64A;&#x641;&#x631;&#x62A;&#x643;. &#x648;&#x645;&#x646; &#x62B;&#x645; &#x62A;&#x642;&#x648;&#x645; &#x623;&#x62F;&#x627;&#x629; mypy &#x628;&#x641;&#x62D;&#x635; &#x627;&#x644;&#x62A;&#x637;&#x628;&#x64A;&#x642; &#x628;&#x646;&#x627;&#x621;&#x64B; &#x639;&#x644;&#x649; &#x647;&#x630;&#x647; &#x627;&#x644;&#x62A;&#x645;&#x644;&#x64A;&#x62D;&#x627;&#x62A;. &#x642;&#x645; &#x628;&#x641;&#x62A;&#x62D; &#x645;&#x62D;&#x631;&#x631;&#x643; &#x644;&#x625;&#x636;&#x627;&#x641;&#x629; &#x62A;&#x644;&#x645;&#x64A;&#x62D;&#x627;&#x62A; &#x644;&#x644;&#x623;&#x646;&#x648;&#x627;&#x639; &#x641;&#x64A; &#x627;&#x644;&#x62F;&#x627;&#x644;&#x629; <em>display_doctors</em> &#x641;&#x64A; &#x627;&#x644;&#x645;&#x62B;&#x627;&#x644; &#x627;&#x644;&#x633;&#x627;&#x628;&#x642;:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> typing <span class="hljs-keyword">import</span> List
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">display_doctors</span><span class="hljs-params">(persons: List[Person])</span> -&gt; <span class="hljs-keyword">None</span>:</span>
+    <span class="hljs-keyword">for</span> person <span class="hljs-keyword">in</span> persons:
+    <span class="hljs-keyword">if</span> person.job.lower()<span class="hljs-keyword">in</span>[<span class="hljs-string">&apos;gp&apos;</span>,<span class="hljs-string">&apos;dentist&apos;</span>,<span class="hljs-string">&apos;cardiologist&apos;</span>]:
+        print(f<span class="hljs-string">&apos;{person.surname} {person.name}&apos;</span>)
+</code></pre>
+<p>&#x623;&#x64F;&#x636;&#x64A;&#x641;&#x64E;&#x62A; &#x627;&#x644;&#x62A;&#x644;&#x645;&#x64A;&#x62D;&#x627;&#x62A; &#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A;&#x629; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x62B;&#x627;&#x644; &#x627;&#x644;&#x633;&#x627;&#x628;&#x642;:</p>
+<ul style="list-style-type: disc; list-style-position: inside;">
+  <li>&#x627;&#x644;&#x62A;&#x644;&#x645;&#x64A;&#x62D; <i>List[Person]</i>: &#x64A;&#x634;&#x631;&#x62D; &#x623;&#x646;&#x651;&#x64E; &#x627;&#x644;&#x62F;&#x627;&#x644;&#x629; <i>display_doctors</i> &#x62A;&#x62A;&#x648;&#x642;&#x639; &#x623;&#x646;&#x652; &#x64A;&#x64F;&#x62F;&#x62E;&#x64E;&#x644; &#x644;&#x647;&#x627; &#x627;&#x644;&#x643;&#x627;&#x626;&#x646; <i>Person</i> &#x641;&#x64A; &#x642;&#x627;&#x626;&#x645;&#x629;.</li>
+  <li>&#x627;&#x644;&#x62A;&#x644;&#x645;&#x64A;&#x62D; <i>-&gt; None</i>: &#x64A;&#x634;&#x631;&#x62D; &#x623;&#x646;&#x651;&#x64E; &#x627;&#x644;&#x62F;&#x627;&#x644;&#x629; &#x633;&#x62A;&#x639;&#x64A;&#x62F; &#x627;&#x644;&#x642;&#x64A;&#x645;&#x629; <i>None</i>.</li>
+</ul>
+
+<p>&#x62F;&#x639;&#x646;&#x627; &#x646;&#x642;&#x648;&#x645; &#x628;&#x62A;&#x634;&#x63A;&#x64A;&#x644; mypy &#x639;&#x644;&#x649; &#x627;&#x644;&#x628;&#x631;&#x645;&#x62C;&#x64A;&#x629; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B;:</p>
+<pre><code class="lang-bash">$ mypy testing_mypy.py
+<span class="hljs-built_in">test</span>_mypy.py:19: error: <span class="hljs-string">&quot;Person&quot;</span> has no attribute <span class="hljs-string">&quot;name&quot;</span>
+<span class="hljs-built_in">test</span>_mypy.py:26: error: Argument 1 to <span class="hljs-string">&quot;display_doctors&quot;</span> has incompatible <span class="hljs-built_in">type</span> <span class="hljs-string">&quot;Person&quot;</span>; expected <span class="hljs-string">&quot;List[Person]&quot;</span>
+<span class="hljs-built_in">test</span>_mypy.py:27: error: List item 2 has incompatible <span class="hljs-built_in">type</span> <span class="hljs-string">&quot;str&quot;</span>; expected <span class="hljs-string">&quot;Person&quot;</span>
+</code></pre>
+<p>&#x623;&#x638;&#x647;&#x631;&#x62A; &#x627;&#x644;&#x628;&#x631;&#x645;&#x62C;&#x64A;&#x629; &#x628;&#x639;&#x636; &#x627;&#x644;&#x623;&#x62E;&#x637;&#x627;&#x621; &#x627;&#x644;&#x62A;&#x64A; &#x64A;&#x645;&#x643;&#x646; &#x625;&#x635;&#x644;&#x627;&#x62D;&#x647;&#x627; &#x643;&#x645;&#x627; &#x64A;&#x644;&#x64A;:</p>
+<ul style="list-style-type: disc; list-style-position: inside;">
+  <li>&#x627;&#x644;&#x62E;&#x637;&#x623; &#x627;&#x644;&#x623;&#x648;&#x644; &#x641;&#x64A; &#x627;&#x644;&#x62F;&#x627;&#x644;&#x629; <i>print</i>&#x60C; &#x62D;&#x64A;&#x62B; &#x64A;&#x62D;&#x627;&#x648;&#x644; &#x627;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C; &#x637;&#x628;&#x627;&#x639;&#x629; person.name&#x60C; &#x648;&#x644;&#x643;&#x646; &#x647;&#x630;&#x627; &#x627;&#x644;&#x645;&#x62A;&#x63A;&#x64A;&#x631; &#x63A;&#x64A;&#x631; &#x645;&#x648;&#x62C;&#x648;&#x62F;. &#x628;&#x62F;&#x644;&#x627;&#x64B; &#x645;&#x646; &#x630;&#x644;&#x643;&#x60C; &#x64A;&#x62C;&#x628; &#x623;&#x646;&#x652; &#x64A;&#x637;&#x628;&#x639; &#x627;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C; <i>person.firstname</i>.</li>
+  <li>&#x62D;&#x62F;&#x62B; &#x627;&#x644;&#x62E;&#x637;&#x623; &#x627;&#x644;&#x62B;&#x627;&#x646;&#x64A; &#x639;&#x646;&#x62F; &#x645;&#x62D;&#x627;&#x648;&#x644;&#x629; &#x627;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C; &#x644;&#x627;&#x633;&#x62A;&#x62F;&#x639;&#x627;&#x621; &#x627;&#x644;&#x62F;&#x627;&#x644;&#x629; <i>display_doctors</i> &#x644;&#x623;&#x648;&#x644; &#x645;&#x631;&#x629;. &#x62D;&#x64A;&#x62B; &#x623;&#x646;&#x651;&#x64E; &#x627;&#x644;&#x645;&#x639;&#x627;&#x645;&#x644; &#x627;&#x644;&#x645;&#x62A;&#x648;&#x642;&#x639; &#x647;&#x648; &#x627;&#x644;&#x643;&#x627;&#x626;&#x646; <i>Person</i> &#x641;&#x64A; &#x642;&#x627;&#x626;&#x645;&#x629;&#x60C; &#x644;&#x643;&#x646; &#x642;&#x62F; &#x645;&#x64F;&#x631;&#x650;&#x631;&#x64E; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x62B;&#x627;&#x644; &#x627;&#x644;&#x643;&#x627;&#x626;&#x646; <i>Person</i> &#x648;&#x62D;&#x633;&#x628;.</li>
+  <li>&#x62D;&#x62F;&#x62B; &#x627;&#x644;&#x62E;&#x637;&#x623; &#x627;&#x644;&#x623;&#x62E;&#x64A;&#x631; &#x646;&#x62A;&#x64A;&#x62C;&#x629; &#x62E;&#x637;&#x623; &#x641;&#x64A; &#x627;&#x644;&#x642;&#x627;&#x626;&#x645;&#x629; &#x627;&#x644;&#x645;&#x64F;&#x62F;&#x62E;&#x644;&#x629;. &#x641;&#x628;&#x62F;&#x644;&#x627;&#x64B; &#x645;&#x646; &#x625;&#x636;&#x627;&#x641;&#x629; &#x627;&#x644;&#x643;&#x627;&#x626;&#x646; <i>lee</i> &#x625;&#x644;&#x649; &#x627;&#x644;&#x642;&#x627;&#x626;&#x645;&#x629;&#x60C; &#x62A;&#x645; &#x625;&#x62F;&#x62E;&#x627;&#x644;&#x647; &#x643;&#x633;&#x644;&#x633;&#x644;&#x629; &#x646;&#x635;&#x64A;&#x629; (<i>&apos;lee&apos;</i>).</li>
+</ul>
+
+<p>&#x641;&#x64A;&#x645;&#x627; &#x64A;&#x644;&#x64A; &#x62A;&#x637;&#x628;&#x64A;&#x642; &#x627;&#x644;&#x625;&#x635;&#x644;&#x627;&#x62D;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x634;&#x631;&#x648;&#x62D;&#x629; &#x639;&#x644;&#x649; &#x627;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C;:</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">display_doctors</span><span class="hljs-params">(persons: List[Person])</span> -&gt; <span class="hljs-keyword">None</span>:</span>
+    <span class="hljs-keyword">for</span> person <span class="hljs-keyword">in</span> persons:
+    <span class="hljs-keyword">if</span> person.job.lower()<span class="hljs-keyword">in</span>[<span class="hljs-string">&apos;gp&apos;</span>,<span class="hljs-string">&apos;dentist&apos;</span>,<span class="hljs-string">&apos;cardiologist&apos;</span>]:
+        print(f<span class="hljs-string">&apos;{person.surname} {person.firstname}&apos;</span>)
+...
+</code></pre>
+<pre><code class="lang-python">display_doctors([mike])
+display_doctors([mike, john, lee])
+</code></pre>
+<p>&#x639;&#x62F;&#x651;&#x650;&#x644; &#x627;&#x644;&#x634;&#x64A;&#x641;&#x631;&#x629; &#x643;&#x645;&#x627; &#x634;&#x64F;&#x631;&#x650;&#x62D; &#x623;&#x639;&#x644;&#x627;&#x647; &#x648;&#x623;&#x639;&#x62F; &#x62A;&#x634;&#x63A;&#x64A;&#x644; <i>mypy</i> &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B;.</p>
+<p>&#x633;&#x62A;&#x62C;&#x62F; &#x627;&#x644;&#x645;&#x632;&#x64A;&#x62F; &#x645;&#x646; &#x627;&#x644;&#x623;&#x62E;&#x637;&#x627;&#x621; &#x641;&#x64A; &#x627;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C;. &#x645;&#x647;&#x645;&#x62A;&#x643; &#x643;&#x642;&#x627;&#x631;&#x626; &#x625;&#x64A;&#x62C;&#x627;&#x62F;&#x647;&#x645;. &#x627;&#x646;&#x638;&#x631; &#x625;&#x644;&#x649; &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x627;&#x644;&#x62A;&#x644;&#x645;&#x64A;&#x62D;&#x627;&#x62A; &#x639;&#x644;&#x649; &#x627;&#x644;&#x635;&#x646;&#x641; (class) <i>Person</i>. &#x62C;&#x631;&#x628; &#x628;&#x646;&#x641;&#x633;&#x643; &#x623;&#x648;&#x644;&#x627;&#x64B;. &#x625;&#x646; &#x623;&#x631;&#x62F;&#x62A; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x645;&#x646; &#x639;&#x645;&#x644;&#x643;&#x60C; &#x641;&#x64A;&#x645;&#x643;&#x646;&#x643; &#x625;&#x64A;&#x62C;&#x627;&#x62F; &#x627;&#x644;&#x628;&#x631;&#x646;&#x627;&#x645;&#x62C; &#x62E;&#x627;&#x644;&#x64A; &#x645;&#x646; &#x627;&#x644;&#x623;&#x62E;&#x637;&#x627;&#x621; &#x641;&#x64A; <a href="https://github.com/cverna/testing_mypy" target="_blank">&#x647;&#x630;&#x627; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639;</a>.</p>
+<h2 id="&#x627;&#x644;&#x62E;&#x627;&#x62A;&#x645;&#x629;">&#x627;&#x644;&#x62E;&#x627;&#x62A;&#x645;&#x629;</h2>
+<p>&#x622;&#x645;&#x644; &#x623;&#x646;&#x652; &#x62A;&#x631;&#x64A;&#x643; &#x647;&#x630;&#x647; &#x627;&#x644;&#x645;&#x642;&#x62F;&#x645;&#x629; &#x627;&#x644;&#x642;&#x635;&#x64A;&#x631;&#x629; &#x639;&#x646; &#x623;&#x62F;&#x627;&#x629; <i>mypy</i> &#x628;&#x639;&#x636; &#x641;&#x648;&#x627;&#x626;&#x62F; &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645;&#x647;&#x627; &#x639;&#x644;&#x649; &#x628;&#x631;&#x645;&#x62C;&#x64A;&#x62A;&#x643;. &#x62A;&#x62C;&#x639;&#x644; &#x647;&#x630;&#x647; &#x627;&#x644;&#x623;&#x62F;&#x627;&#x629; &#x645;&#x646; &#x627;&#x644;&#x633;&#x647;&#x644; &#x635;&#x64A;&#x627;&#x646;&#x629;&#x60C; &#x648;&#x642;&#x631;&#x627;&#x621;&#x629; &#x634;&#x64A;&#x641;&#x631;&#x629; &#x627;&#x644;&#x628;&#x631;&#x645;&#x62C;&#x64A;&#x627;&#x62A;. &#x62A;&#x64F;&#x645;&#x643;&#x646;&#x64F;&#x643;&#x64E; &#x623;&#x64A;&#x636;&#x627;&#x64B; &#x645;&#x646; &#x625;&#x644;&#x62A;&#x642;&#x627;&#x637; &#x627;&#x644;&#x623;&#x62E;&#x637;&#x627;&#x621; &#x642;&#x628;&#x644; &#x62A;&#x634;&#x63A;&#x64A;&#x644; &#x627;&#x644;&#x634;&#x64A;&#x641;&#x631;&#x629;. &#x62A;&#x62A;&#x648;&#x641;&#x631; &#x627;&#x644;&#x623;&#x62F;&#x627;&#x629; &#x623;&#x64A;&#x636;&#x627;&#x64B; &#x644;&#x62A;&#x637;&#x628;&#x64A;&#x642;&#x627;&#x62A; &#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646; &#x627;&#x644;&#x625;&#x635;&#x62F;&#x627;&#x631; 2.7&#x60C; &#x648;&#x644;&#x643;&#x646;&#x647;&#x627; &#x62A;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x635;&#x64A;&#x63A;&#x629; &#x645;&#x62E;&#x62A;&#x644;&#x641;&#x629; &#x62A;&#x639;&#x62A;&#x645;&#x62F; &#x639;&#x644;&#x649; &#x627;&#x644;&#x62A;&#x639;&#x644;&#x64A;&#x642;&#x627;&#x62A;.</p>
+<p>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;: <a href="https://fedoramagazine.org/improve-python-projects-mypy/" target="_blank">https://fedoramagazine.org/improve-python-projects-mypy/</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: الرئيسية">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"حسِّن مشاريع بايثون باستخدام mypy","level":"1.2","depth":1,"previous":{"title":"الرئيسية","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"rtl"},"config":{"plugins":["favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"favicon":{"shortcut":"https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.09/favicon.ico","bookmark":"https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.09/favicon.ico"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"مجلة فيدورا","language":"ar","gitbook":"*","direction":"rtl"},"file":{"path":"docs/improve-python-projects-mypy.md","mtime":"2018-03-09T06:40:31.832Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-09T06:45:07.703Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
