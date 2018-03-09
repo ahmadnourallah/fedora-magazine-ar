@@ -60,8 +60,8 @@ $ mypy testing_mypy.py
 from typing import List
 def display_doctors(persons: List[Person]) -> None:
     for person in persons:
-    if person.job.lower()in['gp','dentist','cardiologist']:
-        print(f'{person.surname} {person.name}')
+        if person.job.lower()in['gp','dentist','cardiologist']:
+            print(f'{person.surname} {person.name}')
 ```
 
 أُضيفَت التلميحات التالية في المثال السابق:
@@ -93,8 +93,8 @@ test_mypy.py:27: error: List item 2 has incompatible type "str"; expected "Perso
 ```python
 def display_doctors(persons: List[Person]) -> None:
     for person in persons:
-    if person.job.lower()in['gp','dentist','cardiologist']:
-        print(f'{person.surname} {person.firstname}')
+        if person.job.lower()in['gp','dentist','cardiologist']:
+            print(f'{person.surname} {person.firstname}')
 ...
 ```
 
@@ -111,4 +111,4 @@ display_doctors([mike, john, lee])
 
 آمل أنْ تريك هذه المقدمة القصيرة عن أداة <i>mypy</i> بعض فوائد استخدامها على برمجيتك. تجعل هذه الأداة من السهل صيانة، وقراءة شيفرة البرمجيات. تُمكنُكَ أيضاً من إلتقاط الأخطاء قبل تشغيل الشيفرة. تتوفر الأداة أيضاً لتطبيقات بايثون الإصدار 2.7، ولكنها تستخدم صيغة مختلفة تعتمد على التعليقات.
 
-المصدر: [https://fedoramagazine.org/improve-python-projects-mypy/](https://fedoramagazine.org/improve-python-projects-mypy/)
+المصدر: [https://fedoramagazine.org/improve-python-projects-mypy](https://fedoramagazine.org/improve-python-projects-mypy)
