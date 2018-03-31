@@ -1,0 +1,400 @@
+
+<!DOCTYPE HTML>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>أجري عمليّة نشر متواصِل مع جيتهاب وبايثون · مجلة فيدورا</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="python-3-7-now-available-in-fedora.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../https:/fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.09/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../https:/fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.09/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="اكتب للبحث" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    الرئيسية
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="improve-python-projects-mypy.html">
+            
+                <a href="improve-python-projects-mypy.html">
+            
+                    
+                    حسِّن مشاريع بايثون باستخدام mypy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="add-fonts-fedora.html">
+            
+                <a href="add-fonts-fedora.html">
+            
+                    
+                    كيف تضيف خطوطاً جديدة إلى فيدورا
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="gnome-3-28-released-coming-fedora-28.html">
+            
+                <a href="gnome-3-28-released-coming-fedora-28.html">
+            
+                    
+                    الإصدار 3.28 من جنوم أُصدِر وسيأتي قريباً مع فيدورا 28
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="python-3-7-now-available-in-fedora.html">
+            
+                <a href="python-3-7-now-available-in-fedora.html">
+            
+                    
+                    لغة بايثون 3.7 متوفرة اﻵن في فيدورا
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="continuous-deployment-github-python.html">
+            
+                <a href="continuous-deployment-github-python.html">
+            
+                    
+                    أجري عمليّة نشر متواصِل مع جيتهاب وبايثون
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            نشرت مع GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >أجري عمليّة نشر متواصِل مع جيتهاب وبايثون</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x625;&#x62C;&#x631;&#x627;&#x621;-&#x639;&#x645;&#x644;&#x64A;&#x651;&#x629;-&#x646;&#x634;&#x631;-&#x645;&#x62A;&#x648;&#x627;&#x635;&#x650;&#x644;-&#x645;&#x639;-&#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628;-&#x648;&#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646;">&#x625;&#x62C;&#x631;&#x627;&#x621; &#x639;&#x645;&#x644;&#x64A;&#x651;&#x629; &#x646;&#x634;&#x631; &#x645;&#x62A;&#x648;&#x627;&#x635;&#x650;&#x644; &#x645;&#x639; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x648;&#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646;</h1>
+<p><img src="https://fedoramagazine.org/wp-content/uploads/2018/03/cd-github-python-945x400.jpg"></p>
+<p>&#x64A;&#x64F;&#x645;&#x643;&#x650;&#x646; &#x644;&#x644;&#x645;&#x637;&#x648;&#x631;&#x64A;&#x646; &#x625;&#x646;&#x634;&#x627;&#x621; &#x627;&#x644;&#x639;&#x62F;&#x64A;&#x62F; &#x645;&#x646; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x641;&#x64A;&#x62F;&#x629; &#x628;&#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x62E;&#x62F;&#x645;&#x629; &#x627;&#x644;&#x62E;&#x637;&#x627;&#x637;&#x64A;&#x641; &#x627;&#x644;&#x634;&#x627;&#x628;&#x643;&#x64A;&#x651;&#x629; (webhooks) &#x645;&#x646; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; (GitHub)&#x60C; &#x641;&#x64E;&#x645;&#x650;&#x646; &#x625;&#x62C;&#x631;&#x627;&#x621; &#x639;&#x645;&#x644;&#x64A;&#x651;&#x629; &#x62A;&#x643;&#x627;&#x645;&#x650;&#x644; &#x645;&#x62A;&#x648;&#x627;&#x635;&#x644; (CI) &#x639;&#x644;&#x649; &#x628;&#x631;&#x645;&#x62C;&#x64A;&#x651;&#x629; &#x62C;&#x646;&#x643;&#x64A;&#x646;&#x632; (Jenkins) &#x625;&#x644;&#x649; &#x62A;&#x645;&#x648;&#x64A;&#x646; (&#x62A;&#x62D;&#x62F;&#x64A;&#x62F; &#x645;&#x648;&#x627;&#x631;&#x62F; - provisioning) &#x627;&#x644;&#x623;&#x62C;&#x647;&#x632;&#x629; &#x641;&#x64A; &#x627;&#x644;&#x633;&#x62D;&#x627;&#x628;&#x629; (cloud)&#x60C; &#x627;&#x644;&#x627;&#x62D;&#x62A;&#x645;&#x627;&#x644;&#x627;&#x62A; &#x63A;&#x64A;&#x631; &#x645;&#x62D;&#x62F;&#x648;&#x62F;&#x629;. &#x641;&#x64A; &#x647;&#x630;&#x627; &#x627;&#x644;&#x62F;&#x631;&#x633; &#x633;&#x646;&#x62A;&#x639;&#x644;&#x645; &#x643;&#x64A;&#x641;&#x64A;&#x651;&#x629; &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x628;&#x627;&#x64A;&#x62B;&#x648;&#x646; &#x648;&#x625;&#x637;&#x627;&#x631; &#x641;&#x644;&#x627;&#x633;&#x643; (Flask) &#x644;&#x628;&#x646;&#x627;&#x621; &#x62E;&#x62F;&#x645;&#x629; &#x646;&#x634;&#x631; &#x645;&#x62A;&#x648;&#x627;&#x635;&#x650;&#x644; (continuous deployment) &#x628;&#x633;&#x64A;&#x637;&#x629;.</p>
+<p>&#x645;&#x62B;&#x627;&#x644; &quot;&#x627;&#x644;&#x646;&#x634;&#x631; &#x627;&#x644;&#x645;&#x62A;&#x648;&#x627;&#x635;&#x650;&#x644;&quot; &#x627;&#x644;&#x630;&#x64A; &#x633;&#x646;&#x642;&#x648;&#x645; &#x628;&#x647; &#x647;&#x646;&#x627; &#x647;&#x648; &#x639;&#x628;&#x627;&#x631;&#x629; &#x639;&#x646; &#x62A;&#x637;&#x628;&#x64A;&#x642; &#x641;&#x644;&#x627;&#x633;&#x643; &#x628;&#x633;&#x64A;&#x637; &#x641;&#x64A;&#x647; &#x646;&#x642;&#x637;&#x629; &#x646;&#x647;&#x627;&#x64A;&#x629; (endpoint) &#x62A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x627;&#x644;&#x637;&#x644;&#x628;&#x627;&#x62A; &#x645;&#x646; &#x62E;&#x637;&#x627;&#x637;&#x64A;&#x641; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x627;&#x644;&#x634;&#x627;&#x628;&#x643;&#x64A;&#x651;&#x629;. &#x628;&#x639;&#x62F; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x645;&#x646; &#x643;&#x644; &#x637;&#x644;&#x628; &#x648;&#x627;&#x644;&#x62A;&#x623;&#x643;&#x651;&#x64F;&#x62F; &#x623;&#x646;&#x651;&#x64E;&#x647; &#x642;&#x627;&#x62F;&#x645; &#x645;&#x646; &#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; (repository) &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x627;&#x644;&#x635;&#x62D;&#x64A;&#x62D;&#x60C; &#x633;&#x62A;&#x642;&#x648;&#x645; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629; &#x628;&#x633;&#x62D;&#x628; (pull) &#x627;&#x644;&#x62A;&#x63A;&#x64A;&#x64A;&#x631;&#x627;&#x62A; &#x625;&#x644;&#x649; &#x627;&#x644;&#x646;&#x633;&#x62E;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x644;&#x64A;&#x651;&#x629; &#x645;&#x646; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; (&#x627;&#x644;&#x645;&#x648;&#x62C;&#x648;&#x62F;&#x629; &#x641;&#x64A; &#x627;&#x644;&#x62E;&#x627;&#x62F;&#x645; &#x627;&#x644;&#x630;&#x64A; &#x62A;&#x639;&#x645;&#x644; &#x639;&#x644;&#x64A;&#x647; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629;). &#x648;&#x628;&#x647;&#x630;&#x647; &#x627;&#x644;&#x637;&#x631;&#x64A;&#x642;&#x629;&#x60C; &#x643;&#x644; &#x645;&#x631;&#x651;&#x64E;&#x629; &#x64A;&#x64F;&#x62F;&#x641;&#x64E;&#x639; &#x625;&#x64A;&#x62F;&#x627;&#x639; &#x62C;&#x62F;&#x64A;&#x62F; &#x625;&#x644;&#x649; &#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x627;&#x644;&#x628;&#x639;&#x64A;&#x62F; (remote)&#x60C; &#x633;&#x64A;&#x62A;&#x645; &#x62A;&#x62D;&#x62F;&#x64A;&#x62B; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; &#x627;&#x644;&#x645;&#x62D;&#x644;&#x64A; &#x62A;&#x644;&#x642;&#x627;&#x626;&#x64A;&#x627;&#x64B;.</p>
+<h2 id="&#x625;&#x646;&#x634;&#x627;&#x621;-&#x62E;&#x62F;&#x645;&#x629;-&#x648;&#x64A;&#x628;-&#x628;&#x648;&#x627;&#x633;&#x637;-&#x641;&#x644;&#x627;&#x633;&#x643;">&#x625;&#x646;&#x634;&#x627;&#x621; &#x62E;&#x62F;&#x645;&#x629; &#x648;&#x64A;&#x628; &#x628;&#x648;&#x627;&#x633;&#x637; &#x641;&#x644;&#x627;&#x633;&#x643;</h2>
+<p>&#x645;&#x646; &#x627;&#x644;&#x633;&#x647;&#x644; &#x628;&#x646;&#x627;&#x621; &#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x648;&#x64A;&#x628; &#x635;&#x63A;&#x64A;&#x631;&#x629; &#x628;&#x648;&#x627;&#x633;&#x637; &#x641;&#x644;&#x627;&#x633;&#x643;. &#x625;&#x644;&#x64A;&#x643; &#x645;&#x62B;&#x627;&#x644; &#x639;&#x644;&#x649; &#x647;&#x64A;&#x643;&#x644;&#x629; &#x645;&#x644;&#x641;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x634;&#x631;&#x648;&#x639;.</p>
+<pre><code>&#x251C;&#x2500;&#x2500; app
+&#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+&#x2502;   &#x2514;&#x2500;&#x2500; webhooks.py
+&#x251C;&#x2500;&#x2500; requirements.txt
+&#x2514;&#x2500;&#x2500; wsgi.py
+</code></pre><p>&#x628;&#x62F;&#x627;&#x64A;&#x629;&#x64B;&#x60C; &#x633;&#x646;&#x642;&#x648;&#x645; &#x628;&#x625;&#x646;&#x634;&#x627;&#x621; &#x627;&#x644;&#x62A;&#x637;&#x628;&#x64A;&#x642;. &#x634;&#x64A;&#x641;&#x631;&#x629; &#x627;&#x644;&#x62A;&#x637;&#x628;&#x64A;&#x642; &#x62A;&#x648;&#x636;&#x639; &#x641;&#x64A; &#x627;&#x644;&#x62F;&#x644;&#x64A;&#x644; <em>app</em>.</p>
+<p>&#x64A;&#x646;&#x64F;&#x634;&#x626; &#x627;&#x644;&#x645;&#x644;&#x641;&#x627;&#x646; (<i>init</i><i>__</i><i>.py</i><i>__</i> &#x648; <em>webhooks.py</em>) &#x62A;&#x637;&#x628;&#x64A;&#x642; &#x641;&#x644;&#x627;&#x633;&#x643;. &#x627;&#x644;&#x623;&#x648;&#x651;&#x644; &#x64A;&#x62D;&#x62A;&#x648;&#x64A; &#x639;&#x644;&#x649; &#x634;&#x64A;&#x641;&#x631;&#x629; &#x625;&#x646;&#x634;&#x627;&#x621; &#x627;&#x644;&#x62A;&#x637;&#x628;&#x64A;&#x642; &#x648;&#x639;&#x644;&#x649; &#x62E;&#x64A;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x625;&#x639;&#x62F;&#x627;&#x62F; (configuration). &#x623;&#x645;&#x627; &#x627;&#x644;&#x62B;&#x627;&#x646;&#x64A;&#x60C; &#x641;&#x64A;&#x62D;&#x62A;&#x648;&#x64A; &#x639;&#x644;&#x649; &#x634;&#x64A;&#x641;&#x631;&#x629; &#x646;&#x642;&#x637;&#x629; &#x627;&#x644;&#x646;&#x647;&#x627;&#x64A;&#x629;&#x60C; &#x648;&#x647;&#x648; &#x627;&#x644;&#x645;&#x643;&#x627;&#x646; &#x627;&#x644;&#x630;&#x64A; &#x633;&#x64A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x641;&#x64A;&#x647; &#x627;&#x644;&#x62A;&#x637;&#x628;&#x64A;&#x642; &#x627;&#x644;&#x628;&#x64A;&#x627;&#x646;&#x627;&#x62A; &#x645;&#x646; &#x637;&#x644;&#x628;&#x627;&#x62A; &#x627;&#x644;&#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628;.</p>
+<p>&#x625;&#x644;&#x64A;&#x643; &#x645;&#x62D;&#x62A;&#x648;&#x649; &#x627;&#x644;&#x645;&#x644;&#x641; <em>app/__init__.py</em>:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask
+
+<span class="hljs-keyword">from</span> .webhooks <span class="hljs-keyword">import</span> webhook
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_app</span><span class="hljs-params">()</span>:</span>
+ <span class="hljs-string">&quot;&quot;&quot; Create, configure and return the Flask application &quot;&quot;&quot;</span>
+
+  app = Flask(__name__)
+  app.config[<span class="hljs-string">&apos;GITHUB_SECRET&apos;</span>] = os.environ.get(<span class="hljs-string">&apos;GITHUB_SECRET&apos;</span>)
+  app.config[<span class="hljs-string">&apos;REPO_PATH&apos;</span>] = os.environ.get(<span class="hljs-string">&apos;REPO_PATH&apos;</span>)
+  app.register_blueprint(webhook)
+
+  <span class="hljs-keyword">return</span>(app)
+</code></pre>
+<p>&#x62A;&#x64F;&#x646;&#x634;&#x626; &#x627;&#x644;&#x62F;&#x627;&#x644;&#x629; &#x645;&#x62A;&#x63A;&#x64A;&#x651;&#x631;&#x64A;&#x646; &#x625;&#x639;&#x62F;&#x627;&#x62F;:</p>
+<ul style="list-style-type: disc; list-style-position: inside;">
+  <li>&#x627;&#x644;&#x645;&#x62A;&#x63A;&#x64A;&#x651;&#x631; <b>GITHUB_SECRET</b>: &#x64A;&#x62D;&#x62A;&#x648;&#x64A; &#x639;&#x644;&#x649; &#x627;&#x644;&#x639;&#x628;&#x627;&#x631;&#x629; &#x627;&#x644;&#x633;&#x631;&#x64A;&#x651;&#x629; &#x627;&#x644;&#x62A;&#x64A; &#x633;&#x62A;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x644;&#x62A;&#x648;&#x62B;&#x64A;&#x642; (&#x644;&#x644;&#x645;&#x635;&#x627;&#x62F;&#x642;&#x629; - authenticate) &#x637;&#x644;&#x628;&#x627;&#x62A; &#x627;&#x644;&#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628;.</li>
+  <li>&#x627;&#x644;&#x645;&#x62A;&#x63A;&#x64A;&#x651;&#x631; <b>REPO_PATH</b>: &#x64A;&#x62D;&#x62A;&#x648;&#x64A; &#x639;&#x644;&#x649; &#x645;&#x633;&#x627;&#x631; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; - &#x627;&#x644;&#x645;&#x62D;&#x644;&#x64A; - &#x627;&#x644;&#x630;&#x64A; &#x633;&#x64A;&#x64F;&#x62D;&#x62F;&#x64E;&#x62B; &#x62A;&#x644;&#x642;&#x627;&#x626;&#x64A;&#x627;&#x64B;.</li>
+</ul>
+
+<p>&#x633;&#x646;&#x633;&#x62A;&#x62E;&#x62F;&#x645; <a href="http://flask.pocoo.org/docs/0.12/blueprints/" target="_blank">&#x627;&#x644;&#x645;&#x64F;&#x62E;&#x637;&#x651;&#x637;&#x627;&#x62A;</a> (blueprints) &#x644;&#x62A;&#x646;&#x638;&#x64A;&#x645; &#x627;&#x644;&#x645;&#x634;&#x631;&#x648;&#x639;. &#x64A;&#x62A;&#x64A;&#x62D; &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x627;&#x644;&#x645;&#x64F;&#x62E;&#x637;&#x651;&#x637;&#x627;&#x62A; &#x62A;&#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x648;&#x627;&#x62C;&#x647;&#x627;&#x62A; &#x627;&#x644;&#x628;&#x631;&#x645;&#x62C;&#x64A;&#x651;&#x629; (APIs) &#x628;&#x634;&#x643;&#x644; &#x645;&#x646;&#x637;&#x642;&#x64A;&#x60C; &#x645;&#x645;&#x627; &#x64A;&#x62C;&#x639;&#x644; &#x635;&#x64A;&#x627;&#x646;&#x629; &#x627;&#x644;&#x62A;&#x637;&#x628;&#x64A;&#x642;&#x627;&#x62A; &#x623;&#x633;&#x647;&#x644;. &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x627;&#x644;&#x645;&#x64F;&#x62E;&#x637;&#x651;&#x637;&#x627;&#x62A; &#x64A;&#x64F;&#x639;&#x62A;&#x628;&#x64E;&#x631; &#x639;&#x645;&#x648;&#x645;&#x627;&#x64B; &#x634;&#x64A;&#x621; &#x62C;&#x64A;&#x62F;.</p>
+<p>&#x625;&#x644;&#x64A;&#x643; &#x645;&#x62D;&#x62A;&#x648;&#x649; &#x627;&#x644;&#x645;&#x644;&#x641; <em>app/webhooks.py</em>:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> hmac
+<span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> request, Blueprint, jsonify, current_app 
+<span class="hljs-keyword">from</span> git <span class="hljs-keyword">import</span> Repo
+
+webhook = Blueprint(<span class="hljs-string">&apos;webhook&apos;</span>, __name__, url_prefix=<span class="hljs-string">&apos;&apos;</span>)
+
+<span class="hljs-meta">@webhook.route(&apos;/github&apos;, methods=[&apos;POST&apos;]) </span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">handle_github_hook</span><span class="hljs-params">()</span>:</span> 
+ <span class="hljs-string">&quot;&quot;&quot; Entry point for github webhook &quot;&quot;&quot;</span>
+
+  signature = request.headers.get(<span class="hljs-string">&apos;X-Hub-Signature&apos;</span>) 
+  sha, signature = signature.split(<span class="hljs-string">&apos;=&apos;</span>)
+
+  secret = str.encode(current_app.config.get(<span class="hljs-string">&apos;GITHUB_SECRET&apos;</span>))
+
+  hashhex = hmac.new(secret, request.data, digestmod=<span class="hljs-string">&apos;sha1&apos;</span>).hexdigest()
+  <span class="hljs-keyword">if</span> hmac.compare_digest(hashhex, signature): 
+    repo = Repo(current_app.config.get(<span class="hljs-string">&apos;REPO_PATH&apos;</span>)) 
+    origin = repo.remotes.origin 
+    origin.pull(<span class="hljs-string">&apos;--rebase&apos;</span>)
+
+    commit = request.json[<span class="hljs-string">&apos;after&apos;</span>][<span class="hljs-number">0</span>:<span class="hljs-number">6</span>]
+    print(<span class="hljs-string">&apos;Repository updated with commit {}&apos;</span>.format(commit))
+  <span class="hljs-keyword">return</span> jsonify({}), <span class="hljs-number">200</span>
+</code></pre>
+<p>&#x633;&#x62A;&#x64F;&#x646;&#x634;&#x626; &#x627;&#x644;&#x634;&#x64A;&#x641;&#x631;&#x629; &#x628;&#x62F;&#x627;&#x64A;&#x629;&#x64B; &#x645;&#x62E;&#x637;&#x637;&#x627;&#x64B; &#x62C;&#x62F;&#x64A;&#x62F;&#x627;&#x64B; &#x648;&#x62A;&#x633;&#x645;&#x64A;&#x647; <em>webhook</em>. &#x62B;&#x645; &#x633;&#x62A;&#x642;&#x648;&#x645; &#x628;&#x625;&#x636;&#x627;&#x641;&#x629; &#x645;&#x648;&#x650;&#x62C;&#x647; &#x62C;&#x62F;&#x64A;&#x62F; &#x644;&#x647;&#x630;&#x627; &#x627;&#x644;&#x645;&#x62E;&#x637;&#x637; &#x628;&#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x627;&#x644;&#x645;&#x64F;&#x632;&#x62E;&#x631;&#x650;&#x641; (decorator) <code>route</code>. &#x633;&#x64A;&#x64F;&#x633;&#x62A;&#x62F;&#x639;&#x649; &#x647;&#x630;&#x627; &#x627;&#x644;&#x645;&#x648;&#x62C;&#x647; &#x639;&#x646;&#x62F;&#x645;&#x627; &#x64A;&#x623;&#x62A;&#x64A; &#x623;&#x64A; &#x637;&#x644;&#x628; &#x645;&#x646; &#x627;&#x644;&#x646;&#x648;&#x639; POST &#x625;&#x644;&#x649; &#x627;&#x644;&#x631;&#x627;&#x628;&#x637; <em>github/</em>.</p>
+<h3 id="&#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642;-&#x645;&#x646;-&#x627;&#x644;&#x637;&#x644;&#x628;">&#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x645;&#x646; &#x627;&#x644;&#x637;&#x644;&#x628;</h3>
+<p>&#x639;&#x646;&#x62F;&#x645;&#x627; &#x62A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629; &#x637;&#x644;&#x628;&#x627;&#x62A; &#x639;&#x644;&#x649; &#x647;&#x630;&#x627; &#x627;&#x644;&#x645;&#x648;&#x62C;&#x647;&#x60C; &#x64A;&#x62C;&#x628; &#x639;&#x644;&#x64A;&#x647;&#x627; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x623;&#x648;&#x644;&#x627;&#x64B; &#x645;&#x646; &#x623;&#x646;&#x651;&#x64E; &#x627;&#x644;&#x637;&#x644;&#x628; &#x642;&#x627;&#x62F;&#x645; &#x645;&#x646; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x648;&#x645;&#x646; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; &#x627;&#x644;&#x635;&#x62D;&#x64A;&#x62D;. &#x64A;&#x64F;&#x631;&#x633;&#x650;&#x644; &#x645;&#x648;&#x642;&#x639; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x62A;&#x648;&#x642;&#x64A;&#x639; &#x625;&#x644;&#x643;&#x62A;&#x631;&#x648;&#x646;&#x64A; (signature) &#x641;&#x64A; &#x62A;&#x631;&#x648;&#x64A;&#x633;&#x629; (header) &#x627;&#x644;&#x637;&#x644;&#x628; <em>X-Hub-Signature</em>. &#x64A;&#x648;&#x644;&#x651;&#x64E;&#x62F; &#x647;&#x630;&#x627; &#x627;&#x644;&#x62A;&#x648;&#x642;&#x64A;&#x639; &#x628;&#x648;&#x627;&#x633;&#x637;&#x629; &#x643;&#x644;&#x645;&#x629; &#x633;&#x631;&#x64A;&#x651;&#x629; (&#x627;&#x644;&#x645;&#x648;&#x62C;&#x648;&#x62F;&#x629; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x62A;&#x63A;&#x64A;&#x651;&#x631; GITHUB_SECRET)&#x60C; &#x628;&#x639;&#x62F;&#x647;&#x627; &#x62A;&#x64F;&#x631;&#x62C;&#x650;&#x639; &#x627;&#x644;&#x645;&#x643;&#x62A;&#x628;&#x629; <a href="https://en.wikipedia.org/wiki/HMAC" target="_blank">HMAC</a> &#x627;&#x644;&#x642;&#x64A;&#x645;&#x629; &#x627;&#x644;&#x633;&#x62F;&#x627;&#x633;&#x64A;&#x651;&#x629; &#x627;&#x644;&#x639;&#x634;&#x631;&#x64A;&#x651;&#x629; (hex digest) &#x645;&#x646; &#x62C;&#x633;&#x645; &#x627;&#x644;&#x637;&#x644;&#x628;&#x60C; &#x648;&#x645;&#x646; &#x62B;&#x645; &#x62A;&#x64F;&#x647;&#x634;&#x64E;&#x631; (hashed) &#x628;&#x648;&#x627;&#x633;&#x637;&#x629; &#x62F;&#x627;&#x644;&#x629; &#x627;&#x644;&#x647;&#x627;&#x634; (hash) <code>sha1</code>.
+&#x644;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x645;&#x646; &#x627;&#x644;&#x637;&#x644;&#x628;&#x60C; &#x62A;&#x62D;&#x62A;&#x627;&#x62C; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629; &#x625;&#x644;&#x649; &#x62D;&#x633;&#x627;&#x628; &#x627;&#x644;&#x62A;&#x648;&#x642;&#x64A;&#x639; &#x627;&#x644;&#x625;&#x644;&#x643;&#x62A;&#x631;&#x648;&#x646;&#x64A; &#x645;&#x62D;&#x644;&#x64A;&#x627;&#x64B; &#x648;&#x645;&#x642;&#x627;&#x631;&#x646;&#x62A;&#x647; &#x645;&#x639; &#x627;&#x644;&#x62A;&#x648;&#x642;&#x64A;&#x639; &#x627;&#x644;&#x622;&#x62A;&#x64A; &#x645;&#x646; &#x62A;&#x631;&#x648;&#x64A;&#x633;&#x629; &#x627;&#x644;&#x637;&#x644;&#x628;. &#x647;&#x630;&#x627; &#x64A;&#x62A;&#x645; &#x639;&#x628;&#x631; &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x627;&#x644;&#x62F;&#x627;&#x644;&#x629; <code>hmac.compare_digest</code>.</p>
+<h3 id="&#x62A;&#x62D;&#x62F;&#x64A;&#x62B;-&#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639;">&#x62A;&#x62D;&#x62F;&#x64A;&#x62B; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639;</h3>
+<p>&#x628;&#x639;&#x62F; &#x627;&#x644;&#x62A;&#x62D;&#x642;&#x642; &#x645;&#x646; &#x627;&#x644;&#x637;&#x644;&#x628;&#x60C; &#x623;&#x635;&#x628;&#x62D; &#x628;&#x627;&#x644;&#x625;&#x645;&#x643;&#x627;&#x646; &#x645;&#x639;&#x627;&#x644;&#x62C;&#x62A;&#x647;. &#x64A;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x647;&#x630;&#x627; &#x627;&#x644;&#x62F;&#x631;&#x633; &#x627;&#x644;&#x648;&#x62D;&#x62F;&#x629; <a href="https://gitpython.readthedocs.io/en/stable/index.html" target="_blank">GitPython</a> &#x644;&#x644;&#x639;&#x645;&#x644; &#x645;&#x639; &#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; &#x62C;&#x64A;&#x62A;. &#x645;&#x646; &#x627;&#x644;&#x648;&#x62D;&#x62F;&#x629; <code>GitPython</code> &#x627;&#x633;&#x62A;&#x62F;&#x639;&#x64A;&#x646;&#x627; &#x627;&#x644;&#x643;&#x627;&#x626;&#x646; <code>Repo</code> &#x644;&#x644;&#x648;&#x635;&#x648;&#x644; &#x625;&#x644;&#x649; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; &#x627;&#x644;&#x628;&#x639;&#x64A;&#x62F; &#x627;&#x644;&#x645;&#x64F;&#x633;&#x645;&#x649; <code>origin</code> (&#x627;&#x633;&#x645; &#x627;&#x644;&#x645;&#x62A;&#x63A;&#x64A;&#x651;&#x631; &#x627;&#x644;&#x630;&#x64A; &#x62D;&#x64F;&#x641;&#x650;&#x638;&#x64E;&#x62A; &#x641;&#x64A;&#x647; &#x62C;&#x644;&#x633;&#x629; &#x627;&#x644;&#x648;&#x635;&#x648;&#x644; &#x644;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639;). &#x633;&#x62A;&#x642;&#x648;&#x645; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629; &#x628;&#x633;&#x62D;&#x628; &#x622;&#x62E;&#x631; &#x627;&#x644;&#x62A;&#x63A;&#x64A;&#x64A;&#x631;&#x627;&#x62A; &#x645;&#x62D;&#x644;&#x64A;&#x627;&#x64B; &#x645;&#x646; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; <code>origin</code>&#x60C; &#x643;&#x645;&#x627; &#x633;&#x62A;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x623;&#x64A;&#x636;&#x627;&#x64B; &#x627;&#x644;&#x62E;&#x64A;&#x627;&#x631; <em>rebase&#x2013;</em> &#x644;&#x62A;&#x641;&#x627;&#x62F;&#x64A; &#x645;&#x634;&#x643;&#x644;&#x627;&#x62A; &#x627;&#x644;&#x62A;&#x62F;&#x627;&#x62E;&#x644; (merges).</p>
+<p>&#x633;&#x62A;&#x637;&#x628;&#x639; &#x627;&#x644;&#x62F;&#x627;&#x644;&#x629; <code>print</code> &#x646;&#x635;&#x627;&#x64B; &#x644;&#x623;&#x63A;&#x631;&#x627;&#x636; &#x62A;&#x646;&#x642;&#x64A;&#x62D;&#x64A;&#x651;&#x629; &#x64A;&#x62D;&#x648;&#x64A; &#x627;&#x644;&#x647;&#x627;&#x634; &#x627;&#x644;&#x642;&#x635;&#x64A;&#x631; &#x644;&#x644;&#x625;&#x64A;&#x62F;&#x627;&#x639; &#x627;&#x644;&#x645;&#x64F;&#x633;&#x62A;&#x644;&#x645; &#x645;&#x646; &#x62C;&#x633;&#x645; &#x627;&#x644;&#x637;&#x644;&#x628;. &#x64A;&#x634;&#x631;&#x62D; &#x647;&#x630;&#x627; &#x627;&#x644;&#x645;&#x62B;&#x627;&#x644; &#x643;&#x64A;&#x641;&#x64A;&#x651;&#x629; &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x62C;&#x633;&#x645; &#x627;&#x644;&#x637;&#x644;&#x628;. &#x644;&#x644;&#x645;&#x632;&#x64A;&#x62F; &#x645;&#x646; &#x627;&#x644;&#x62A;&#x641;&#x627;&#x635;&#x64A;&#x644; &#x62D;&#x648;&#x644; &#x627;&#x644;&#x628;&#x64A;&#x627;&#x646;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x627;&#x62D;&#x629; &#x641;&#x64A; &#x62C;&#x633;&#x645; &#x627;&#x644;&#x637;&#x644;&#x628;&#x60C; &#x627;&#x637;&#x644;&#x639; &#x639;&#x644;&#x649; <a href="https://developer.github.com/v3/activity/events/types/#webhook-payload-example-26" target="_blank">&#x62A;&#x648;&#x62B;&#x64A;&#x642; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x644;&#x644;&#x645;&#x637;&#x648;&#x631;&#x64A;&#x646;</a>.</p>
+<p>&#x641;&#x64A; &#x627;&#x644;&#x646;&#x647;&#x627;&#x64A;&#x629;&#x60C; &#x633;&#x62A;&#x64F;&#x639;&#x64A;&#x62F; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629; &#x633;&#x644;&#x633;&#x644;&#x629; &#x62C;&#x633;&#x648;&#x646; (JSON) &#x646;&#x635;&#x64A;&#x651;&#x629; &#x641;&#x627;&#x631;&#x63A;&#x629; &#x648;&#x631;&#x642;&#x645; &#x627;&#x644;&#x62D;&#x627;&#x644;&#x629; (status code) 200. &#x647;&#x630;&#x627; &#x64A;&#x64F;&#x62E;&#x628;&#x631; &#x62E;&#x627;&#x62F;&#x645; &#x62E;&#x64F;&#x637;&#x627;&#x641; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x623;&#x646;&#x651;&#x64E; &#x627;&#x644;&#x637;&#x644;&#x628; &#x627;&#x64F;&#x633;&#x62A;&#x642;&#x628;&#x650;&#x644; &#x628;&#x646;&#x62C;&#x627;&#x62D;.</p>
+<h2 id="&#x646;&#x634;&#x631;-&#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629;">&#x646;&#x634;&#x631; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629;</h2>
+<p>&#x633;&#x646;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x62E;&#x627;&#x62F;&#x645; &#x627;&#x644;&#x648;&#x64A;&#x628; <a href="http://gunicorn.org/" target="_blank">gunicorn</a> &#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629; &#x641;&#x64A; &#x647;&#x630;&#x627; &#x627;&#x644;&#x645;&#x62B;&#x627;&#x644;. &#x628;&#x62F;&#x627;&#x64A;&#x629;&#x64B; &#x642;&#x645; &#x628;&#x62A;&#x62B;&#x628;&#x64A;&#x62A; &#x627;&#x644;&#x625;&#x639;&#x62A;&#x645;&#x627;&#x62F;&#x64A;&#x627;&#x62A;. &#x64A;&#x645;&#x643;&#x646;&#x643; &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x647;&#x630;&#x627; &#x627;&#x644;&#x623;&#x645;&#x631; <a href="https://fedoramagazine.org/howto-use-sudo/" target="_blank">&#x628;&#x635;&#x644;&#x627;&#x62D;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x630;&#x631;</a> &#x639;&#x644;&#x649; &#x62E;&#x627;&#x62F;&#x645; &#x641;&#x64A;&#x62F;&#x648;&#x631;&#x627; &#x645;&#x62F;&#x639;&#x648;&#x645;:</p>
+<pre><code>sudo dnf install python3-gunicorn python3-flask python3-GitPython
+</code></pre><p>&#x627;&#x644;&#x622;&#x646; &#x642;&#x645; &#x628;&#x62A;&#x639;&#x62F;&#x64A;&#x644; &#x627;&#x644;&#x645;&#x644;&#x641; <em>wsgi.py</em> &#x627;&#x644;&#x645;&#x64F;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x645;&#x646; &#x642;&#x628;&#x644; &#x627;&#x644;&#x62E;&#x627;&#x62F;&#x645; <em>gunicorn</em> &#x644;&#x62A;&#x634;&#x63A;&#x64A;&#x644; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629;:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> app <span class="hljs-keyword">import</span> create_app
+
+application = create_app()
+</code></pre>
+<p>&#x644;&#x62A;&#x62C;&#x631;&#x628;&#x629; &#x647;&#x630;&#x647; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629;&#x60C; &#x642;&#x645; &#x628;&#x627;&#x633;&#x62A;&#x646;&#x633;&#x627;&#x62E; (clone) <a href="https://github.com/cverna/github_hook_deployment.git" target="_blank">&#x647;&#x630;&#x627; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639;</a> &#x623;&#x648; &#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639;&#x643; &#x627;&#x644;&#x62E;&#x627;&#x635; &#x628;&#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x647;&#x630;&#x627; &#x627;&#x644;&#x623;&#x645;&#x631;:</p>
+<pre><code>git clone https://github.com/cverna/github_hook_deployment.git /opt/
+</code></pre><p>&#x627;&#x644;&#x62E;&#x637;&#x648;&#x629; &#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A;&#x629; &#x647;&#x64A; &#x623;&#x646; &#x62A;&#x642;&#x648;&#x645; &#x628;&#x625;&#x639;&#x62F;&#x627;&#x62F; &#x645;&#x62A;&#x63A;&#x64A;&#x651;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x628;&#x64A;&#x626;&#x629; (environment variables) &#x627;&#x644;&#x645;&#x64F;&#x633;&#x62A;&#x62E;&#x62F;&#x645;&#x629; &#x645;&#x646; &#x642;&#x628;&#x644; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629;. &#x642;&#x645; &#x628;&#x62A;&#x634;&#x63A;&#x64A;&#x644; &#x627;&#x644;&#x623;&#x645;&#x631;&#x64A;&#x646; &#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A;&#x64A;&#x646;:</p>
+<pre><code>export GITHUB_SECRET=asecretpassphraseusebygithubwebhook
+export REPO_PATH=/opt/github_hook_deployment/
+</code></pre><p>&#x64A;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x647;&#x630;&#x627; &#x627;&#x644;&#x62F;&#x631;&#x633; <a href="https://github.com/cverna/github_hook_deployment" target="_blank">&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; &#x627;&#x644;&#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x647;&#x630;&#x627;</a>&#x60C; &#x648;&#x644;&#x643;&#x646; &#x64A;&#x645;&#x643;&#x646;&#x643; &#x625;&#x646; &#x623;&#x631;&#x62F;&#x62A; &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x623;&#x64A; &#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; &#x622;&#x62E;&#x631; &#x62A;&#x631;&#x64A;&#x62F;. &#x648;&#x641;&#x64A; &#x627;&#x644;&#x646;&#x647;&#x627;&#x64A;&#x629;&#x60C; &#x642;&#x645; &#x628;&#x62A;&#x634;&#x63A;&#x64A;&#x644; &#x62E;&#x627;&#x62F;&#x645; &#x627;&#x644;&#x648;&#x64A;&#x628; &#x628;&#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x627;&#x644;&#x623;&#x645;&#x631;&#x64A;&#x646; &#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A;&#x64A;&#x646;:</p>
+<pre><code>cd /opt/github_hook_deployment/
+gunicorn --bind 0.0.0.0 wsgi:application --reload
+</code></pre><p>&#x633;&#x62A;&#x642;&#x648;&#x645; &#x647;&#x630;&#x647; &#x627;&#x644;&#x62E;&#x64A;&#x627;&#x631;&#x627;&#x62A; &#x628;&#x628;&#x62F;&#x621; &#x62E;&#x627;&#x62F;&#x645; &#x627;&#x644;&#x648;&#x64A;&#x628; &#x639;&#x644;&#x649; &#x639;&#x646;&#x648;&#x627;&#x646; &#x627;&#x644;&#x634;&#x628;&#x643;&#x629; 0.0.0.0&#x60C; &#x647;&#x630;&#x627; &#x64A;&#x639;&#x646;&#x64A; &#x623;&#x646;&#x651;&#x64E;&#x647; &#x633;&#x64A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x627;&#x644;&#x637;&#x644;&#x628;&#x627;&#x62A; &#x627;&#x644;&#x642;&#x627;&#x62F;&#x645;&#x629; &#x645;&#x646; &#x623;&#x64A; &#x62C;&#x647;&#x627;&#x632; (&#x645;&#x636;&#x64A;&#x641;). &#x64A;&#x64F;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x627;&#x644;&#x62E;&#x64A;&#x627;&#x631; <em>reload&#x2013;</em> &#x644;&#x625;&#x639;&#x627;&#x62F;&#x629; &#x62A;&#x634;&#x63A;&#x64A;&#x644; &#x627;&#x644;&#x62E;&#x627;&#x62F;&#x645; &#x639;&#x646;&#x62F; &#x623;&#x64A; &#x62A;&#x63A;&#x64A;&#x64A;&#x631;&#x627;&#x62A; &#x62A;&#x62D;&#x635;&#x644; &#x639;&#x644;&#x649; &#x634;&#x64A;&#x641;&#x631;&#x629; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629;. &#x648;&#x647;&#x646;&#x627; &#x64A;&#x62D;&#x635;&#x644; &#x633;&#x62D;&#x631; &#x627;&#x644;&#x646;&#x634;&#x631; &#x627;&#x644;&#x645;&#x62A;&#x648;&#x627;&#x635;&#x644;! &#x641;&#x64A; &#x643;&#x644; &#x645;&#x631;&#x651;&#x64E;&#x629; &#x64A;&#x64F;&#x633;&#x62A;&#x642;&#x628;&#x64E;&#x644; &#x637;&#x644;&#x628; &#x645;&#x646; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628;&#x60C; &#x633;&#x62A;&#x64F;&#x633;&#x62D;&#x628; &#x622;&#x62E;&#x631; &#x627;&#x644;&#x62A;&#x62D;&#x62F;&#x64A;&#x62B;&#x627;&#x62A; &#x625;&#x644;&#x649; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; &#x627;&#x644;&#x645;&#x62D;&#x644;&#x64A;&#x60C; &#x648;&#x628;&#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A; &#x633;&#x64A;&#x643;&#x62A;&#x634;&#x641; &#x627;&#x644;&#x62E;&#x627;&#x62F;&#x645; &#x647;&#x630;&#x647; &#x627;&#x644;&#x62A;&#x63A;&#x64A;&#x64A;&#x631;&#x627;&#x62A;&#x60C; &#x641;&#x633;&#x64A;&#x642;&#x648;&#x645; &#x628;&#x625;&#x639;&#x627;&#x62F;&#x629; &#x62A;&#x634;&#x63A;&#x64A;&#x644; &#x627;&#x644;&#x62A;&#x637;&#x628;&#x64A;&#x642; &#x62A;&#x644;&#x642;&#x627;&#x626;&#x64A;&#x627;&#x64B;.</p>
+<p><strong>&#x645;&#x644;&#x627;&#x62D;&#x638;&#x629;</strong>: &#x644;&#x62A;&#x644;&#x642;&#x64A; &#x627;&#x644;&#x637;&#x644;&#x628;&#x627;&#x62A; &#x645;&#x646; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628;&#x60C; &#x639;&#x644;&#x649; &#x62E;&#x627;&#x62F;&#x645; &#x627;&#x644;&#x648;&#x64A;&#x628; (&#x628;&#x631;&#x645;&#x62C;&#x64A;&#x651;&#x629; &#x627;&#x644;&#x62E;&#x627;&#x62F;&#x645;) &#x623;&#x646; &#x64A;&#x643;&#x648;&#x646; &#x645;&#x648;&#x62C;&#x648;&#x62F;&#x627;&#x64B; &#x639;&#x644;&#x649; &#x62E;&#x627;&#x62F;&#x645; (&#x62C;&#x647;&#x627;&#x632;) &#x64A;&#x645;&#x644;&#x643; &#x639;&#x646;&#x648;&#x627;&#x646; &#x634;&#x628;&#x643;&#x629; &#x639;&#x645;&#x648;&#x645;&#x64A; (public IP). &#x643;&#x637;&#x631;&#x64A;&#x642;&#x629; &#x633;&#x647;&#x644;&#x629; &#x644;&#x644;&#x642;&#x64A;&#x627;&#x645; &#x628;&#x630;&#x644;&#x643;&#x60C; &#x64A;&#x645;&#x643;&#x646;&#x643; &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x627;&#x645; &#x645;&#x632;&#x648;&#x62F; &#x627;&#x644;&#x633;&#x62D;&#x627;&#x628;&#x629; &#x627;&#x644;&#x645;&#x64F;&#x641;&#x636;&#x64E;&#x644; &#x644;&#x62F;&#x64A;&#x643;&#x60C; &#x645;&#x62B;&#x644;: DigitalOcean &#x60C;AWS &#x60C;Linode.</p>
+<h2 id="&#x625;&#x639;&#x62F;&#x627;&#x62F;-&#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639;-&#x627;&#x644;&#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628;">&#x625;&#x639;&#x62F;&#x627;&#x62F; &#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; &#x627;&#x644;&#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628;</h2>
+<p>&#x622;&#x62E;&#x631; &#x62C;&#x632;&#x621; &#x645;&#x646; &#x627;&#x644;&#x62F;&#x631;&#x633; &#x647;&#x648; &#x625;&#x639;&#x62F;&#x627;&#x62F; &#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639; &#x627;&#x644;&#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x644;&#x625;&#x631;&#x633;&#x627;&#x644; &#x627;&#x644;&#x62E;&#x64F;&#x637;&#x627;&#x641; &#x625;&#x644;&#x649; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629;.</p>
+<p>&#x645;&#x646; &#x625;&#x639;&#x62F;&#x627;&#x62F;&#x627;&#x62A; &#x645;&#x633;&#x62A;&#x648;&#x62F;&#x639;&#x643;&#x60C; &#x627;&#x62E;&#x62A;&#x631; &#x627;&#x644;&#x62E;&#x64A;&#x627;&#x631; <em>Webhook</em> &#x645;&#x646; &#x627;&#x644;&#x642;&#x627;&#x626;&#x645;&#x629; &#x648;&#x627;&#x636;&#x63A;&#x637; &#x639;&#x644;&#x649; <em>Add Webhook</em>. &#x627;&#x62F;&#x62E;&#x644; &#x627;&#x644;&#x645;&#x639;&#x644;&#x648;&#x645;&#x627;&#x62A; &#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A;&#x629; &#x641;&#x64A; &#x627;&#x644;&#x62D;&#x642;&#x648;&#x644;:</p>
+<ul style="list-style-type: disc; list-style-position: inside;">
+  <li>&#x627;&#x644;&#x62E;&#x64A;&#x627;&#x631; <b>Payload URL</b> (&#x639;&#x646;&#x648;&#x627;&#x646; &#x627;&#x644;&#x62D;&#x645;&#x648;&#x644;&#x629;): &#x631;&#x627;&#x628;&#x637; &#x627;&#x644;&#x62E;&#x62F;&#x645;&#x629;&#x60C; &#x639;&#x644;&#x649; &#x633;&#x628;&#x64A;&#x644; &#x627;&#x644;&#x645;&#x62B;&#x627;&#x644; <i>http://public_ip_address:8000/github</i>.</li>
+  <li>&#x627;&#x644;&#x62E;&#x64A;&#x627;&#x631; <b>Content type</b> (&#x646;&#x648;&#x639; &#x627;&#x644;&#x645;&#x62D;&#x62A;&#x648;&#x649; &#x627;&#x644;&#x645;&#x64F;&#x631;&#x633;&#x64E;&#x644;): &#x627;&#x62E;&#x62A;&#x631; <i>application/json</i>.</li>
+  <li>&#x627;&#x644;&#x62E;&#x64A;&#x627;&#x631; <b>Secret</b> (&#x627;&#x644;&#x643;&#x644;&#x645;&#x629; &#x627;&#x644;&#x633;&#x631;&#x64A;&#x651;&#x629;): &#x642;&#x64A;&#x645;&#x629; &#x645;&#x62A;&#x63A;&#x64A;&#x651;&#x631; &#x627;&#x644;&#x628;&#x64A;&#x626;&#x629; <b>GITHUB_SECRET</b> &#x627;&#x644;&#x630;&#x64A; &#x639;&#x631;&#x641;&#x646;&#x627;&#x647; &#x633;&#x627;&#x628;&#x642;&#x627;&#x64B;.</li>
+</ul>
+
+<p>&#x62B;&#x645; &#x627;&#x636;&#x63A;&#x637; &#x639;&#x644;&#x649; &#x627;&#x644;&#x632;&#x631; <em>Add Webhook</em>.</p>
+<p><img src="https://fedoramagazine.org/wp-content/uploads/2018/03/Screenshot-2018-3-26-cverna-github_hook_deployment1.png"></p>
+<p>&#x633;&#x64A;&#x64F;&#x631;&#x633;&#x650;&#x644; &#x645;&#x648;&#x642;&#x639; &#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628; &#x627;&#x644;&#x622;&#x646; &#x637;&#x644;&#x628; &#x641;&#x64A; &#x643;&#x644; &#x645;&#x631;&#x651;&#x64E;&#x629; &#x62A;&#x64F;&#x62F;&#x641;&#x64E;&#x639; &#x62A;&#x63A;&#x64A;&#x64A;&#x631;&#x627;&#x62A; &#x62C;&#x62F;&#x64A;&#x62F;&#x629; &#x625;&#x644;&#x649; &#x627;&#x644;&#x62E;&#x627;&#x62F;&#x645;.</p>
+<h2 id="&#x627;&#x644;&#x62E;&#x627;&#x62A;&#x645;&#x629;">&#x627;&#x644;&#x62E;&#x627;&#x62A;&#x645;&#x629;</h2>
+<p>&#x64A;&#x648;&#x636;&#x651;&#x650;&#x62D; &#x644;&#x643; &#x647;&#x630;&#x627; &#x627;&#x644;&#x62F;&#x631;&#x633; &#x643;&#x64A;&#x641;&#x64A;&#x651;&#x629; &#x643;&#x62A;&#x627;&#x628;&#x629; &#x62E;&#x62F;&#x645;&#x629; &#x648;&#x64A;&#x628; &#x62A;&#x639;&#x62A;&#x645;&#x62F; &#x639;&#x644;&#x649; &#x641;&#x644;&#x627;&#x633;&#x643; &#x644;&#x627;&#x633;&#x62A;&#x642;&#x628;&#x627;&#x644; &#x627;&#x644;&#x637;&#x644;&#x628;&#x627;&#x62A; &#x645;&#x646; &#x62E;&#x62F;&#x645;&#x629; &#x627;&#x644;&#x62E;&#x637;&#x627;&#x637;&#x64A;&#x641; &#x627;&#x644;&#x634;&#x627;&#x628;&#x643;&#x64A;&#x651;&#x629; &#x627;&#x644;&#x62E;&#x627;&#x635;&#x629; &#x628;&#x62C;&#x64A;&#x62A;&#x647;&#x627;&#x628;&#x60C; &#x648;&#x643;&#x64A;&#x641;&#x64A;&#x651;&#x629; &#x625;&#x62C;&#x631;&#x627;&#x621; &#x639;&#x645;&#x644;&#x64A;&#x651;&#x629; &#x646;&#x634;&#x631; &#x645;&#x62A;&#x648;&#x627;&#x635;&#x650;&#x644;. &#x627;&#x646;&#x637;&#x644;&#x627;&#x642;&#x627;&#x64E;&#x64B; &#x645;&#x646; &#x647;&#x630;&#x627; &#x627;&#x644;&#x62F;&#x631;&#x633;&#x60C; &#x64A;&#x646;&#x628;&#x63A;&#x64A; &#x623;&#x646; &#x62A;&#x643;&#x648;&#x646; &#x642;&#x627;&#x62F;&#x631;&#x627;&#x64B; &#x639;&#x644;&#x649; &#x628;&#x646;&#x627;&#x621; &#x62E;&#x62F;&#x645;&#x627;&#x62A; &#x648;&#x64A;&#x628; &#x645;&#x641;&#x64A;&#x62F;&#x629;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="python-3-7-now-available-in-fedora.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: لغة بايثون 3.7 متوفرة اﻵن في فيدورا">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"أجري عمليّة نشر متواصِل مع جيتهاب وبايثون","level":"1.6","depth":1,"previous":{"title":"لغة بايثون 3.7 متوفرة اﻵن في فيدورا","level":"1.5","depth":1,"path":"docs/python-3-7-now-available-in-fedora.md","ref":"docs/python-3-7-now-available-in-fedora.md","articles":[]},"dir":"rtl"},"config":{"plugins":["favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"favicon":{"shortcut":"https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.09/favicon.ico","bookmark":"https://fedoramagazine.org/wp-content/themes/fedoramagazine-theme-0.09/favicon.ico"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"مجلة فيدورا","language":"ar","gitbook":"*","direction":"rtl"},"file":{"path":"docs/continuous-deployment-github-python.md","mtime":"2018-03-31T14:10:21.306Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-31T14:10:29.228Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
